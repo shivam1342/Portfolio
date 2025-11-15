@@ -1,0 +1,345 @@
+.contact-section {
+  margin: 2rem auto;
+  position: relative;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+/* Contact Info Panel */
+.contact-info-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.08),
+    4px 4px 12px var(--shadow-light);
+  border: 2px solid rgba(93, 64, 55, 0.15);
+}
+
+.info-title {
+  font-size: 2rem;
+  color: var(--ink-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid var(--accent-teal);
+  box-shadow: 2px 2px 6px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.contact-detail-item:hover {
+  transform: translateX(5px);
+  box-shadow: 3px 3px 8px var(--shadow-medium);
+}
+
+.detail-icon {
+  font-size: 1.5rem;
+  color: var(--accent-teal);
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: var(--ink-brown);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.detail-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-dark);
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px dashed rgba(93, 64, 55, 0.2);
+}
+
+.social-title {
+  font-size: 1.5rem;
+  color: var(--ink-dark);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid var(--ink-brown);
+  text-decoration: none;
+  color: var(--ink-dark);
+  font-size: 2rem;
+  box-shadow: 2px 2px 6px var(--shadow-light);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  background: var(--hover-color);
+  color: white;
+  border-color: var(--hover-color);
+  box-shadow: 3px 3px 10px var(--shadow-medium);
+}
+
+.social-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+
+/* Sketch Decoration */
+.sketch-decoration {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sketch-line {
+  flex: 1;
+  height: 2px;
+  background: var(--ink-brown);
+  opacity: 0.3;
+}
+
+.sketch-text {
+  font-size: 1.1rem;
+  color: var(--ink-brown);
+  white-space: nowrap;
+}
+
+/* Post-it Form */
+.contact-form-panel {
+  position: relative;
+}
+
+.postit-form {
+  background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 
+    4px 4px 0px rgba(0, 0, 0, 0.1),
+    6px 6px 16px var(--shadow-medium);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transform: rotate(1deg);
+  position: relative;
+}
+
+.postit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+}
+
+.postit-title {
+  font-size: 1.8rem;
+  color: var(--ink-dark);
+}
+
+.postit-pin {
+  font-size: 2rem;
+  transform: rotate(45deg);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--ink-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink-dark);
+  background: white;
+  border: 2px solid var(--ink-brown);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 3px rgba(90, 143, 143, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--ink-dark);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  box-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.2),
+    4px 4px 12px var(--shadow-medium);
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: var(--ink-navy);
+  transform: translateY(-2px);
+  box-shadow: 
+    4px 4px 0px rgba(0, 0, 0, 0.2),
+    5px 5px 16px var(--shadow-heavy);
+}
+
+.btn-icon {
+  font-size: 1.5rem;
+}
+
+/* Closing Note */
+.closing-note {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-gold);
+  text-align: center;
+}
+
+.closing-note p {
+  font-size: 1.3rem;
+  color: var(--ink-dark);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.signature {
+  font-size: 1.8rem;
+  color: var(--ink-dark);
+  margin-top: 1rem;
+}
+
+/* Page corner fold effect */
+.page-corner-fold {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 80px 80px;
+  border-color: transparent transparent rgba(93, 64, 55, 0.2) transparent;
+  pointer-events: none;
+}
+
+.page-corner-fold::before {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 80px 80px;
+  border-color: transparent transparent rgba(244, 232, 216, 0.6) transparent;
+}
+
+@media (max-width: 968px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .postit-form {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .info-card {
+    padding: 1.5rem;
+  }
+  
+  .social-icons {
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    padding: 0.8rem;
+    font-size: 1.5rem;
+  }
+  
+  .sketch-text {
+    font-size: 0.9rem;
+  }
+  
+  .postit-form {
+    padding: 1.5rem;
+  }
+  
+  .closing-note p {
+    font-size: 1.1rem;
+  }
+}

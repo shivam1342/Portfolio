@@ -1,0 +1,239 @@
+.projects-section {
+  margin: 2rem auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #fffef9 0%, #fff9e6 100%);
+  padding: 1.8rem;
+  border-radius: 8px;
+  box-shadow: 
+    4px 4px 0px rgba(0, 0, 0, 0.08),
+    6px 6px 16px var(--shadow-medium);
+  border: 2px solid rgba(93, 64, 55, 0.15);
+  position: relative;
+  transform: rotate(-1deg);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+.project-card:hover {
+  box-shadow: 
+    6px 6px 0px rgba(0, 0, 0, 0.12),
+    8px 8px 20px var(--shadow-heavy);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px dashed var(--accent-red);
+}
+
+.case-number {
+  font-size: 1.3rem;
+  color: var(--accent-red);
+  font-weight: 600;
+}
+
+.project-status {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: var(--font-typewriter);
+}
+
+.status-badge.completed {
+  background: rgba(76, 175, 80, 0.2);
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}
+
+.status-badge.active {
+  background: rgba(33, 150, 243, 0.2);
+  color: #1565c0;
+  border: 1px solid #2196f3;
+}
+
+.status-badge.showcase {
+  background: rgba(156, 39, 176, 0.2);
+  color: #6a1b9a;
+  border: 1px solid #9c27b0;
+}
+
+.project-content {
+  position: relative;
+  z-index: 2;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  color: var(--ink-dark);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.project-category {
+  margin-bottom: 1rem;
+}
+
+.category-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(201, 169, 97, 0.3);
+  border-left: 3px solid var(--accent-gold);
+  color: var(--ink-dark);
+  letter-spacing: 0.5px;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-dark);
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  background: white;
+  border: 1.5px solid var(--ink-brown);
+  border-radius: 4px;
+  color: var(--ink-dark);
+  font-weight: 500;
+  box-shadow: 2px 2px 4px var(--shadow-light);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.tech-tag:hover {
+  background: var(--ink-dark);
+  color: white;
+  border-color: var(--ink-dark);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  background: white;
+  color: var(--ink-dark);
+  text-decoration: none;
+  border: 2px solid var(--ink-dark);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 0px var(--ink-dark);
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0px var(--ink-dark);
+}
+
+.project-link.primary {
+  background: var(--ink-dark);
+  color: white;
+}
+
+.project-link.primary:hover {
+  background: var(--ink-navy);
+}
+
+/* Tape corners */
+.tape-corner {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: rgba(255, 248, 220, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-light);
+  z-index: 3;
+}
+
+.tape-corner.top-left {
+  top: -8px;
+  left: 15px;
+  transform: rotate(-12deg);
+}
+
+.tape-corner.bottom-right {
+  bottom: -8px;
+  right: 15px;
+  transform: rotate(12deg);
+}
+
+/* Paperclip decoration */
+.paperclip {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  font-size: 2rem;
+  transform: rotate(45deg);
+  opacity: 0.6;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .paperclip {
+  transform: rotate(55deg) scale(1.1);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .project-card {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+}

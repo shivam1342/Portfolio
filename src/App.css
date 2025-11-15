@@ -1,0 +1,99 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  min-height: 100vh;
+  perspective: 2000px;
+  padding-top: 80px;
+}
+
+.page-container {
+  min-height: calc(100vh - 80px);
+  transform-style: preserve-3d;
+}
+
+/* Paper page effect */
+.page-section {
+  background: linear-gradient(
+    135deg,
+    rgba(244, 232, 216, 0.95) 0%,
+    rgba(239, 225, 206, 0.95) 100%
+  );
+  border-radius: 4px;
+  box-shadow: 
+    2px 4px 8px var(--shadow-light),
+    4px 8px 16px var(--shadow-medium);
+  position: relative;
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.page-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 2px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 8px,
+    var(--accent-red) 8px,
+    var(--accent-red) 10px
+  );
+  opacity: 0.3;
+}
+
+/* Ink stain decorations */
+.ink-stain {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(44, 24, 16, 0.08) 0%,
+    rgba(44, 24, 16, 0.03) 50%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.ink-stain.small {
+  width: 30px;
+  height: 30px;
+}
+
+.ink-stain.medium {
+  width: 50px;
+  height: 50px;
+}
+
+.ink-stain.large {
+  width: 80px;
+  height: 80px;
+}
+
+/* Doodle elements */
+.doodle {
+  position: absolute;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px;
+  }
+  
+  .page-section {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .page-section::before {
+    left: 20px;
+  }
+}
